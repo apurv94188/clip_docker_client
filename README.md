@@ -1,3 +1,19 @@
+# creating dcker image in mac for raspberry pi
+docker buildx build -t clipdockerclient_rasp:latest --platform linux/arm/v7 .
+
+# save docker image as a tar file so that you can share it as a file
+sudo docker save -o ./../clipdockerclient_rasp.tar clipdockerclient_rasp
+
+# load docker from a tar file
+sudo docker load -i clipboardclient_rasp.tar
+
+# running docker container in raspbian OS
+docker run -dp 3000:3000 clipboardclient_rasp:latest
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
