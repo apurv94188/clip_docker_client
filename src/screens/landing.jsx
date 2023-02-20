@@ -11,6 +11,7 @@ export class Landing extends Component {
             return (
                   <div>
                         <Link to='/toSingup'>Sign Up</Link>
+                        <br/>
                         <Link to='/login'>Login</Link>
                   </div>
             )
